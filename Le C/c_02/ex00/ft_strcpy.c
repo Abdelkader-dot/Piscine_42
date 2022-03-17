@@ -6,11 +6,9 @@
 /*   By: atabi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 10:31:34 by atabi             #+#    #+#             */
-/*   Updated: 2022/03/14 11:23:43 by atabi            ###   ########.fr       */
+/*   Updated: 2022/03/16 19:09:25 by atabi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -22,6 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	des[i] = '\0';
-	return (*dest);
+	dest[i] = '\0';
+	return (dest);
 }

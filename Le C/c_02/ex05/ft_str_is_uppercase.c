@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 14:36:09 by atabi             #+#    #+#             */
-/*   Updated: 2022/03/16 17:27:18 by atabi            ###   ########.fr       */
+/*   Created: 2022/03/15 20:45:13 by atabi             #+#    #+#             */
+/*   Updated: 2022/03/15 21:04:32 by atabi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-		else
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
 			return (0);
+		i++;
 	}
 	return (1);
 }
 /*
 int	main(void)
 {
-	int	x;
-	char	c[] = "a";
-	//	ft_str_is_alpha(c);
-	x = ft_str_is_alpha(c);
-	printf("%d", x);
-	return (0);
+	char c[] = "ASHJhD";
+
+	printf("%d", ft_str_is_uppercase(c));
+
+	return(0);
 }*/

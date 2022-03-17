@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 14:36:09 by atabi             #+#    #+#             */
-/*   Updated: 2022/03/16 17:27:18 by atabi            ###   ########.fr       */
+/*   Created: 2022/03/15 21:07:15 by atabi             #+#    #+#             */
+/*   Updated: 2022/03/15 21:49:57 by atabi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-		else
+		if (str[i] < ' ' || str[i] > '~')
 			return (0);
+		i++;
 	}
 	return (1);
 }
 /*
 int	main(void)
 {
-	int	x;
-	char	c[] = "a";
-	//	ft_str_is_alpha(c);
-	x = ft_str_is_alpha(c);
-	printf("%d", x);
+	char	c[] = " 5644354`";
+	c[0] = 1;
+
+	printf("%s %d", c, ft_str_is_printable(c));
+
 	return (0);
 }*/

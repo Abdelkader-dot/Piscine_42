@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 14:36:09 by atabi             #+#    #+#             */
-/*   Updated: 2022/03/16 17:27:18 by atabi            ###   ########.fr       */
+/*   Created: 2022/03/15 22:11:32 by atabi             #+#    #+#             */
+/*   Updated: 2022/03/16 13:58:34 by atabi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
+	int	diff;
 
+	diff = (int)('a' - 'A');
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-		else
-			return (0);
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += diff;
+		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
 int	main(void)
 {
-	int	x;
-	char	c[] = "a";
-	//	ft_str_is_alpha(c);
-	x = ft_str_is_alpha(c);
-	printf("%d", x);
+	char	c[] = "AAGSHSS0000000000SJYJDGHMGH1111111111kbvcvig";
+
+	printf("%s", ft_strlowcase(c));
+
 	return (0);
 }*/

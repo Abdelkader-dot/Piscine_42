@@ -6,32 +6,29 @@
 /*   By: atabi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:47:55 by atabi             #+#    #+#             */
-/*   Updated: 2022/03/14 17:57:56 by atabi            ###   ########.fr       */
+/*   Updated: 2022/03/16 13:23:54 by atabi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
-	int	x;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-			x = 1;
-		else
+		if (!(str[i] >= '0' && str[i] <= '9'))
 			return (0);
 		i++;
 	}
-	return (x);
+	return (1);
 }
 /*
 int	main(void)
 {
-	char	c[] = "4  3";
+	char	c[] = "";
 	int	x;
 
 	x = ft_str_is_numeric(c);
