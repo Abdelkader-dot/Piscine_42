@@ -1,0 +1,27 @@
+Assignment name  : aff_z
+Expected files   : aff_z.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Écrivez un programme qui prend une chaîne et affiche le premier 'z'
+caractère qu'il y rencontre, suivi d'une nouvelle ligne. S'il n'y a pas
+caractères 'z' dans la chaîne, le programme écrit 'z' suivi
+par une nouvelle ligne. Si le nombre de paramètres n'est pas 1, le programme affiche
+'z' suivi d'une nouvelle ligne.
+
+Write a program that takes a string, and displays the first 'z'
+character it encounters in it, followed by a newline. If there are no
+'z' characters in the string, the program writes 'z' followed
+by a newline. If the number of parameters is not 1, the program displays
+'z' followed by a newline.
+
+Example:
+
+$> ./aff_z "abc" | cat -e
+z$
+$> ./aff_z "dubO a POIL" | cat -e
+z$
+$> ./aff_z "zaz sent le poney" | cat -e
+z$
+$> ./aff_z | cat -e
+z$

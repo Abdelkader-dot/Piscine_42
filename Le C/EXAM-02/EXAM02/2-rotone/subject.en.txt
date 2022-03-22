@@ -1,0 +1,37 @@
+Assignment name  : rotone
+Expected files   : rotone.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Écrivez un programme qui prend une chaîne et l'affiche, en remplaçant chacune de ses
+lettres par la suivante dans l'ordre alphabétique.
+
+'z' devient 'a' et 'Z' devient 'A'. Le boîtier reste inchangé.
+
+La sortie sera suivie d'un \n.
+
+Si le nombre d'arguments n'est pas 1, le programme affiche \n.
+
+
+
+
+
+Write a program that takes a string and displays it, replacing each of its
+letters by the next one in alphabetical order.
+'z' becomes 'a' and 'Z' becomes 'A'. Case remains unaffected.
+The output will be followed by a \n.
+If the number of arguments is not 1, the program displays \n.
+
+Example:
+
+$>./rotone "abc"
+bcd
+$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
+Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.$
+$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
+BlkiA aMLJKa , 23z $
+$>./rotone | cat -e
+$
+$>
+$>./rotone "" | cat -e
+$
+$>
